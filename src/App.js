@@ -1,22 +1,39 @@
 import React, { Component } from 'react';
-import logo from '../assets/logo.svg';
+import logo from './assets/logo.svg';
 import Parallax from 'react-springy-parallax'
-import imagey from '../assets/clients-main.svg'
+import imagey from './assets/clients-main.svg'
+import pBG from './assets/parallaxBackground.png'
 import './App.css';
 
 class App extends Component {
   render() {
     const styles = {
-    parallax: {
+    parallax:{
+      backgroundImage: `url(${pBG})`,
+      backgroundSize: '100%'
+
+      },
+    parallaxLayer: {
        fontFamily: 'Menlo-Regular, Menlo, monospace',
        fontSize: 14,
        lineHeight: '10px',
        color: 'white',
        display: 'flex', alignItems: 'center', justifyContent: 'center'
+     },
+     innerDiv: {
+       backgroundColor: 'yellow',
+       height: '80%',
+       width: '80%'
+     },
+     textDiv: {
+
+     },
+     screenShotDiv: {
+
      }
   }
     return (
-      <Parallax ref="parallax" pages={4}>
+      <Parallax ref="parallax" pages={4} style={styles.parallax}>
 
           <Parallax.Layer offset={0} speed={1} style={{ backgroundColor: '#576CA8' }} />
           <Parallax.Layer offset={1} speed={1} style={{ backgroundColor: '#576CA8' }} />
@@ -27,33 +44,37 @@ class App extends Component {
           <Parallax.Layer
               offset={0}
               speed={0.5}
-              style={styles.parallax}
+              style={styles.parallaxLayer}
               onClick={() => this.refs.parallax.scrollTo(1)}>
-              <div  styles={styles.innerDiv}>Writing Stuff here</div>
+              <div style={styles.innerDiv}>
+                Writing Stuff here
+              </div>
           </Parallax.Layer>
 
           <Parallax.Layer
               offset={1}
               speed={-0.1}
-              style={styles.parallax}
+              style={styles.parallaxLayer}
               onClick={() => this.refs.parallax.scrollTo(2)}>
-              <div  styles={styles.innerDiv}>Writing Stuff here</div>
+              <div style={styles.innerDiv}>
+                Writing Stuff here
+              </div>
           </Parallax.Layer>
 
           <Parallax.Layer
               offset={2}
               speed={0.5}
-              style={styles.parallax}
+              style={styles.parallaxLayer}
               onClick={() => this.refs.parallax.scrollTo(3)}>
-              <div  styles={styles.innerDiv}>Writing Stuff here</div>
+              <div style={styles.innerDiv}>Writing Stuff here</div>
           </Parallax.Layer>
 
           <Parallax.Layer
               offset={3}
               speed={0.5}
-              style={styles}
+              style={styles.parallaxLayer}
               onClick={() => this.refs.parallax.scrollTo(0)}>
-              <div  className='innerDiv'>Writing Stuff here</div>
+              <div style={styles.innerDiv}>Writing Stuff here</div>
           </Parallax.Layer>
 
       </Parallax>
