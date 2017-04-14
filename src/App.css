@@ -1,10 +1,7 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+  height: auto;
+  background-color: #1B264F
 }
 
 .App-header {
@@ -17,6 +14,21 @@
 .App-intro {
   font-size: large;
 }
+.Portfolio-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.portfolioItem{
+  height: 600px;
+  width: 90%;
+  margin: 120px 10px;
+  text-align: center;
+  background-color: #576CA8;
+}
+
+
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
