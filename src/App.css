@@ -28,6 +28,12 @@
   background-color: #576CA8;
 }
 
+p {
+  background-color: #222;
+  padding: 5px;
+
+  border-radius: 5px;
+}
 
 
 @keyframes App-logo-spin {
