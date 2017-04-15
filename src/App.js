@@ -3,6 +3,7 @@ import logo from './assets/logo.svg';
 import Parallax from 'react-springy-parallax'
 import imagey from './assets/clients-main.svg'
 import pBG from './assets/parallaxBackground.png'
+import INAB2 from './assets/INAB2.png'
 import BG from './assets/BG1.svg'
 import Pic from './assets/Picture1.jpg'
 import INAB_Grp from './assets/INAB_Group1.svg'
@@ -35,8 +36,8 @@ class App extends Component {
      },
      sectionDiv: {
        display: 'flex',
-
-       width: '45%',
+       width: '33%',
+       height: '100%',
        flexDirection: 'column',
        alignItems: 'center',
        justifyContent:'center'
@@ -49,6 +50,10 @@ class App extends Component {
      },
      gridDiv: {
        margin: '5px'
+     },
+     phone: {
+       width: '60%',
+       height: '90%'
      }
   }
     return (
@@ -71,13 +76,12 @@ class App extends Component {
                 </div>
                 <div style={styles.sectionDiv}>
                   <h2>About Me:</h2>
-
                 </div>
                 <div style={styles.sectionDiv}>
                   <h2>Skills:</h2>
                   <div style={styles.skillsDiv}>
                     <div style={styles.gridDiv}>
-                      <p>Technolofdafdfasgies:</p>
+                      <p>Technologies:</p>
                     </div>
                     <div  style={styles.gridDiv}>
                       <p>React</p>
@@ -94,11 +98,11 @@ class App extends Component {
                   </div>
                   <div style={styles.skillsDiv}>
                     <div style={styles.gridDiv}>
-                      <p>Tools and Softwares:</p>
+                      <p>Softwares:</p>
                     </div>
                     <div  style={styles.gridDiv}>
                       <p>RESTful APIs</p>
-                      <p>Adobe Creative Suite</p>
+                      <p>Adobe CC</p>
                       <p>Firebase</p>
                       <p>Xcode</p>
                     </div>
@@ -118,10 +122,16 @@ class App extends Component {
               speed={-0.1}
               style={styles.parallaxLayer}
               onClick={() => this.refs.parallax.scrollTo(2)}>
-              <div style={{...styles.innerDiv, backgroundImage: `url(${BG})`, backgroundPosition: 'fixed', backgroundSize: '100% 100%'}}>
-                <div></div>
-                <div></div>
-                <div></div>
+              <div style={{...styles.innerDiv, backgroundImage: `url(${BG})`, backgroundPosition: 'fixed', backgroundSize: 'cover'}}>
+                <div style={styles.sectionDiv}>
+                  <h1>INAB (BeerMe)</h1>
+                </div>
+                <div style={styles.sectionDiv}>
+                  <img src={INAB2} style={styles.phone}/>
+                </div>
+                <div style={styles.sectionDiv}>
+                  <p>Concept:</p>
+                </div>
               </div>
           </Parallax.Layer>
 
@@ -130,7 +140,51 @@ class App extends Component {
               speed={0.5}
               style={styles.parallaxLayer}
               onClick={() => this.refs.parallax.scrollTo(3)}>
-              <div style={styles.innerDiv}>Writing Stuff here</div>
+              <div style={{...styles.innerDiv, backgroundImage: `url(${BG})`, backgroundPosition: 'fixed', backgroundSize: 'cover'}}>
+                <div style={styles.sectionDiv}>
+                  <h1>GoTeam</h1>
+                </div>
+                <div style={styles.sectionDiv}>
+                  <img src={INAB2} style={styles.phone}/>
+                </div>
+                <div style={styles.sectionDiv}>
+                  <h2>Skills:</h2>
+                  <div style={styles.skillsDiv}>
+                    <div style={styles.gridDiv}>
+                      <p>Technologies:</p>
+                    </div>
+                    <div  style={styles.gridDiv}>
+                      <p>React</p>
+                      <p>Redux</p>
+                      <p>React Native</p>
+                      <p>React Native</p>
+                    </div>
+                    <div  style={styles.gridDiv}>
+                      <p>Ruby</p>
+                      <p>AJAX</p>
+                      <p>JQuery</p>
+                      <p>SCSS / SASS </p>
+                    </div>
+                  </div>
+                  <div style={styles.skillsDiv}>
+                    <div style={styles.gridDiv}>
+                      <p>Softwares:</p>
+                    </div>
+                    <div  style={styles.gridDiv}>
+                      <p>RESTful APIs</p>
+                      <p>Adobe CC</p>
+                      <p>Firebase</p>
+                      <p>Xcode</p>
+                    </div>
+                    <div  style={styles.gridDiv}>
+                      <p>Trello</p>
+                      <p>SnapKit</p>
+                      <p>GitHub</p>
+                      <p>Postgres</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
           </Parallax.Layer>
 
           <Parallax.Layer
@@ -138,7 +192,52 @@ class App extends Component {
               speed={0.5}
               style={styles.parallaxLayer}
               onClick={() => this.refs.parallax.scrollTo(0)}>
-              <div style={styles.innerDiv}>Writing Stuff here</div>
+              <div style={{...styles.innerDiv, backgroundImage: `url(${BG})`, backgroundPosition: 'fixed', backgroundSize: '100% 100%'}}>
+                <div style={styles.sectionDiv}>
+                  <h1>Resdan Logan</h1>
+                  <img src={Pic} style={styles.picImg} className="pic1" alt="My-Picture"/>
+                </div>
+                <div style={styles.sectionDiv}>
+                  <h2>About Me:</h2>
+                </div>
+                <div style={styles.sectionDiv}>
+                  <h2>Skills:</h2>
+                  <div style={styles.skillsDiv}>
+                    <div style={styles.gridDiv}>
+                      <p>Technologies:</p>
+                    </div>
+                    <div  style={styles.gridDiv}>
+                      <p>React</p>
+                      <p>Redux</p>
+                      <p>React Native</p>
+                      <p>React Native</p>
+                    </div>
+                    <div  style={styles.gridDiv}>
+                      <p>Ruby</p>
+                      <p>AJAX</p>
+                      <p>JQuery</p>
+                      <p>SCSS / SASS </p>
+                    </div>
+                  </div>
+                  <div style={styles.skillsDiv}>
+                    <div style={styles.gridDiv}>
+                      <p>Softwares:</p>
+                    </div>
+                    <div  style={styles.gridDiv}>
+                      <p>RESTful APIs</p>
+                      <p>Adobe CC</p>
+                      <p>Firebase</p>
+                      <p>Xcode</p>
+                    </div>
+                    <div  style={styles.gridDiv}>
+                      <p>Trello</p>
+                      <p>SnapKit</p>
+                      <p>GitHub</p>
+                      <p>Postgres</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
           </Parallax.Layer>
 
       </Parallax>
